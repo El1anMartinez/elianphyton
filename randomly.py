@@ -76,6 +76,67 @@
 #  pf=pf*0.90
 # print(f"el precio a pagar con el descuento será de {pf}")
 
-  
+import time
+import random 
+# num1=random.randint(1,9)
+# num2=random.randint(1,9)
+# num3=random.randint(1,9)
+# nums=0
+# print (f"Los numeros generados son {num1} {num2} {num3} ")
+# t1=False
+# t2=False
+# t3=False
+# while not t1 or not t2 or not t3:
+    
+#     numerito=random.randint(1,9)
+#     print(f"El numero es {numerito} ")
+#     time.sleep(1)
+#     if numerito==num1:
+#         t1=True
+#     if numerito==num2:
+#         t2=True
+#     if numerito==num3:
+#         t3=True
+#     nums=nums+1
+# print (f"GANASTE, en {nums} turnos ")
 
+g=int(input("Cuanto pesa su producto? (En Gramos): "))
+sodio=int(input("Cuanto sodio tiene su producto? (entre 1 y 100): "))
+envio=int(input("Donde se enviará la lata? (1.-Nacional o 2.-Internacional): "))
+lugar=(input("Hacia que sector se enviará la lata?: "))
+laton=""
+
+
+if g<=500:
+    print ("Su lata es tamaño normal")
+    tipo="Su lata es tamaño normal"
+
+elif g>500 and g<1499:
+    print ("Su lata es tamaño mediano")
+    tipo="Su lata es tamaño mediana"
+
+elif g>1500:
+    print ("Su lata es tamaño grande ")
+    tipo=("Su lata es Tamaño grande")
+
+
+
+
+if sodio>=5 and sodio < 9 :
+    print ("Su lata es especial")
+    laton=("especial ")
+elif sodio >= 9 :
+    print ("Su lata es acorazada ")
+    laton=("acorazada ")
+
+
+
+if envio==2:
+    print ("Lata con Sticker de Validación Sanitaria")
+    sanitaria=("con validacion sanitaria")
+else: 
+    print ("Lata sin sticker de Validación Sanitaria")
+    sanitaria=("sin validacion sanitaria")
+
+print (f"{g}gr , {sodio}% de sodio , {tipo} , {sanitaria}, {laton}y su envio se dirige hacia {lugar}")
 
